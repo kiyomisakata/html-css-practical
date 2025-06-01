@@ -23,8 +23,8 @@ img {
 h2 {
   font-size: 34px;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 h3 {
   font-size: 24px;
@@ -36,7 +36,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 34px 20%;
+  margin: 50px 10%;
 }
 #title {
   display: inline-block;
@@ -59,12 +59,40 @@ nav a {
   font-weight: bold;
 }
 
+/* スクロールフェードイン */
+.scroll-fade-up {
+  transition: 3s;
+  opacity: 0;
+}
+.add {
+  opacity: 1;
+}
+/* topボタン */
+#topbutton {
+  display: none;
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
+  background-color: #000000;
+  padding: 28px 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 50;
+}
+#topbutton > a {
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 /* about */
 #about_flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 50px 20%;
+  margin: 50px 10%;
   gap: 50px;
 }
 #about_flex > img {
@@ -85,11 +113,46 @@ nav a {
 #works_flex {
   display: flex;
   justify-content: space-between;
-  margin: 50px 20%;
+  margin: 50px 10%;
 }
 #works_flex > div {
   width: 30%;
 }
+
+/* モーダル */
+.tomodal > img {
+  cursor: pointer;
+}
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+#modalimg {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+#close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 40px;
+  cursor: pointer;
+}
+
 /* footer */
 footer {
   text-align: center;
@@ -98,7 +161,7 @@ footer {
 
 @media (max-width: 767px) {
   #header_flex {
-    margin: 28px 5%;
+    margin: 30px 5%;
   }
   #title {
     font-size: 28px;
